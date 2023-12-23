@@ -32,8 +32,9 @@ CREATE TABLE `users` (
   `email` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `role` varchar(50) NOT NULL
-  `verify_token` varchar(50) ,
+  `role` varchar(50) NOT NULL,
+  `verify_token` varchar(50) NOT NULL,
+  `verified` BOOLEAN NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
