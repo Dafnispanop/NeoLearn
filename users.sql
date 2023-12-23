@@ -34,7 +34,7 @@ CREATE TABLE `users` (
   `username` varchar(50) NOT NULL,
   `role` varchar(50) NOT NULL,
   `verify_token` varchar(50) NOT NULL,
-  `verified` BOOLEAN NOT NULL DEFAULT 0
+  `verified` TINYINT NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
