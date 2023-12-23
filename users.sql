@@ -33,6 +33,7 @@ CREATE TABLE `users` (
   `password` varchar(50) NOT NULL,
   `username` varchar(50) NOT NULL,
   `role` varchar(50) NOT NULL
+  `verify_token` varchar(50) ,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
