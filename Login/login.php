@@ -4,7 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login - NeoLearn</title>
-        <link rel="stylesheet" href="Login_SignUp_style.css">
+        <link rel="stylesheet" href="../Login_SignUp_style.css">
     </head>
     <body>
         <div class="container">
@@ -31,7 +31,7 @@
                     ?>
                     <div class ="changeSign-field">
                         <p> "Don't have an account?"</p>
-                        <a href= "signUp.php"> Sign Up </a>
+                        <a href= "SignUp/signUp.php"> Sign Up </a>
                     </div>
                 </form>
             </div>
