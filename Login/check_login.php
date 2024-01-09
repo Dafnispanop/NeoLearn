@@ -10,13 +10,10 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         return $data;
       }
 
-    $username = test_input($_POST['username']);
-    $password = test_input($_POST['password']);
-
-    $sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-    $result = $conn->query($sql);
+    $email = test_input($_POST['user_email']);
+    $password = test_input($_POST['user_password']);
     
-    $sql = "SELECT * FROM users WHERE username = '$username'";
+    $sql = "SELECT * FROM users WHERE email = '$email'";
     $result = $conn->query($sql);
 
     if ($result->num_rows == 1) {
@@ -26,6 +23,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         if (password_verify($password, $stored_hashed_password)) {
             session_start();
             $_SESSION['id'] = $row['id'];
+            $_SESSION['email'] = $row['email'];
             $_SESSION['username'] = $row['username'];
             $_SESSION['role'] = $row['role'];
            // header("Location: ../index.php");

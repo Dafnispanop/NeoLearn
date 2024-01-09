@@ -1,6 +1,6 @@
 <?php
 
-require ("../connect.php");
+require("../connect.php");
 ?>
 
 <!DOCTYPE html>
@@ -20,18 +20,18 @@ require ("../connect.php");
                     if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["token"]) ){
                         $verify_token = $_GET["token"];
                         $verify_status = haveToken( $conn, $verify_token);
-                        &page = "Login";
+                        $page = "Login";
                         // Handle the verification status
                         if ($verify_status == 1)  {
-                            echo "<br><h3>Your Account has been verified <strong>Successfully</strong>. <a href= "Login/login.php"> Login </a> </h3><br>";
+                            echo "<br><h3>Your Account has been verified <strong>Successfully</strong>. <a href='../Login/login.php'> Login </a> </h3><br>";
                         }else if($verify_status == 2){
-                            echo "<br><h3>Your account has <strong>already<strong> been verified</strong>. <a href= "Login/login.php"> Login </a> </h3>";
+                            echo "<br><h3>Your account has <strong>already</strong> been verified. <a href='../Login/login.php'> Login </a> </h3>";
                         }else if($verify_status == 0) {
-                            echo "<br><h3>The link is <strong>invalid</strong>. <a href= "../signUp.php"> Sign Up </a> </h3><br> ";
-                            &page = "Sign Up";
+                            echo "<br><h3>The link is <strong>invalid</strong>. <a href='signUp.php'> Sign Up </a> </h3><br> ";
+                            $page = "Sign Up";
                         }
                         echo "Wait <strong>3 seconds</strong> to redirect you to <strong>" . $page . "</strong> page";
-                        header("refresh:3;url= Login/login.php"); // Redirect for sign in after 5 seconds 
+                        header("refresh:3;url= ../Login/login.php"); // Redirect for sign in after 5 seconds 
                     }
                     // Function to check if a token is valid and update the verification status
                     function haveToken($conn, $verify_token) {

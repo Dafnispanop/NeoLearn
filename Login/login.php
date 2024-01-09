@@ -31,7 +31,7 @@
                     ?>
                     <div class ="changeSign-field">
                         <p> "Don't have an account?"</p>
-                        <a href= "SignUp/signUp.php"> Sign Up </a>
+                        <a href= "../SignUp/signUp.php"> Sign Up </a>
                     </div>
                 </form>
             </div>

@@ -1,5 +1,5 @@
 <?php
-    $db_server_name = "localhost:8080";
+    $db_server_name = "localhost";
     $dbname = "neolearn";
     $db_user_name = "root";
     $db_password = "";
